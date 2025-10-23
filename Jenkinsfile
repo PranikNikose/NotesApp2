@@ -3,9 +3,9 @@ pipeline {
 
     environment {
         DOCKER_HUB_USER = "praniknikose"
-        DOCKER_HUB_IMAGE = "notesapp"
-        DOCKER_HUB_TAG = "latest"
-        K8S_NAMESPACE = "notesapp-ns"
+        DOCKER_HUB_IMAGE = "notesapp2"
+        DOCKER_HUB_TAG = "1.0"
+        K8S_NAMESPACE = "notesapp2-ns"
     }
 
     stages {
