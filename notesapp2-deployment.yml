@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notesapp2-deployment
+  namespace: notesapp2-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      pod-app: notes2-pod
+  template:
+    metadata:
+      labels:
+        pod-app: notes2-pod
+    spec:
+      containers:
+        - name: notesapp2-container
+          image: praniknikose/notesapp:2.0
+          ports:
+            - containerPort: 8080
