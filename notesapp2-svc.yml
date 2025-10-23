@@ -10,4 +10,4 @@ spec:
   ports:
     - port: 8080        # Service port
       targetPort: 8080  # Container port
-      nodePort: 30081   # External port
+      nodePort: 30082   # External port
