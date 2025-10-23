@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/<your_user>/<repo>.git', branch: 'main'
+                git url: 'https://github.com/PranikNikose/NotesApp2.git', branch: 'main'
             }
         }
 
@@ -39,9 +39,9 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh """
-                kubectl apply -f k8s-namespace.yaml
-                kubectl apply -f k8s-deployment.yaml
-                kubectl apply -f k8s-service.yaml
+                kubectl apply -f notesapp2-ns.yml
+                kubectl apply -f notesapp2-deployment.yml
+                kubectl apply -f notesapp2-svc.yml
                 """
             }
         }
