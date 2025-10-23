@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: notesapp2-container
-          image: praniknikose/notesapp:2.0
+          image: praniknikose/notesapp2:1.0
           ports:
             - containerPort: 8080
